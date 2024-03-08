@@ -8,7 +8,8 @@ const login = async (req, res = response) => {
  
   let dbcon = mysql.createConnection(config);
 
-  let QUERY = "SELECT * FROM users WHERE email = ?";
+  let QUERY = "SELECT * FROM users WHERE email = '" + email + "'";
+  console.log(QUERY);
 
   dbcon.query(QUERY, [email], (err, results) => {
 
