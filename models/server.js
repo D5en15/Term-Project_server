@@ -32,11 +32,11 @@ class Server {
     this.app.use(this.paths.homepage, require("../routes/homepage"));
     this.app.use(this.paths.users, require("../routes/users"));
     // Catch all requests that don't match any route
-    this.app.get("*", (req, res) => {
-      res.sendFile(
-        path.join(__dirname, "../../server/build/index.html")
-      );
-    });
+    // this.app.get("*", (req, res) => {
+    //   res.sendFile(
+    //     path.join(__dirname, "../../server/build/index.html")
+    //   );
+    // });
   }
 
   listen() {
